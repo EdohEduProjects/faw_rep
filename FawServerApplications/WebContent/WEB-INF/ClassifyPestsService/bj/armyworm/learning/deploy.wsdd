@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ClassifyPestsService WSDL service -->
+
+  <service name="ClassifyPests" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://learning.armyworm.bj"/>
+      <parameter name="wsdlServiceElement" value="ClassifyPestsService"/>
+      <parameter name="schemaQualified" value="http://learning.armyworm.bj"/>
+      <parameter name="wsdlServicePort" value="ClassifyPests"/>
+      <parameter name="className" value="bj.armyworm.learning.ClassifyPests"/>
+      <parameter name="wsdlPortType" value="ClassifyPests"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://learning.armyworm.bj" xmlns:retNS="http://learning.armyworm.bj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="MLPCPestClassifier" qname="operNS:MLPCPestClassifier" returnQName="retNS:MLPCPestClassifierReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://learning.armyworm.bj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:trainingfile" type="tns:string"/>
+        <parameter xmlns:pns="http://learning.armyworm.bj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:evaluationfile" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://learning.armyworm.bj" xmlns:retNS="http://learning.armyworm.bj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="updateTrainingFile" qname="operNS:UpdateTrainingFile" returnQName="retNS:UpdateTrainingFileReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://learning.armyworm.bj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:oldtraingfile" type="tns:string"/>
+        <parameter xmlns:pns="http://learning.armyworm.bj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:newImage" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://learning.armyworm.bj" xmlns:retNS="http://learning.armyworm.bj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="classifyAPest" qname="operNS:ClassifyAPest" returnQName="retNS:ClassifyAPestReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://learning.armyworm.bj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Pclass" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="MLPCPestClassifier classifyAPest updateTrainingFile"/>
+
+  </service>
+</deployment>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://learning.armyworm.bj" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://learning.armyworm.bj" xmlns:intf="http://learning.armyworm.bj" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://learning.armyworm.bj" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="MLPCPestClassifier">
+    <complexType>
+     <sequence>
+      <element name="trainingfile" type="xsd:string"/>
+      <element name="evaluationfile" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="MLPCPestClassifierResponse">
+    <complexType>
+     <sequence>
+      <element name="MLPCPestClassifierReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="UpdateTrainingFile">
+    <complexType>
+     <sequence>
+      <element name="oldtraingfile" type="xsd:string"/>
+      <element name="newImage" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="UpdateTrainingFileResponse">
+    <complexType>
+     <sequence>
+      <element name="UpdateTrainingFileReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="ClassifyAPest">
+    <complexType>
+     <sequence>
+      <element name="Pclass" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="ClassifyAPestResponse">
+    <complexType>
+     <sequence>
+      <element name="ClassifyAPestReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="UpdateTrainingFileResponse">
+
+      <wsdl:part element="impl:UpdateTrainingFileResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ClassifyAPestResponse">
+
+      <wsdl:part element="impl:ClassifyAPestResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="MLPCPestClassifierResponse">
+
+      <wsdl:part element="impl:MLPCPestClassifierResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="UpdateTrainingFileRequest">
+
+      <wsdl:part element="impl:UpdateTrainingFile" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="MLPCPestClassifierRequest">
+
+      <wsdl:part element="impl:MLPCPestClassifier" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ClassifyAPestRequest">
+
+      <wsdl:part element="impl:ClassifyAPest" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ClassifyPests">
+
+      <wsdl:operation name="MLPCPestClassifier">
+
+         <wsdl:input message="impl:MLPCPestClassifierRequest" name="MLPCPestClassifierRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:MLPCPestClassifierResponse" name="MLPCPestClassifierResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="UpdateTrainingFile">
+
+         <wsdl:input message="impl:UpdateTrainingFileRequest" name="UpdateTrainingFileRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:UpdateTrainingFileResponse" name="UpdateTrainingFileResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ClassifyAPest">
+
+         <wsdl:input message="impl:ClassifyAPestRequest" name="ClassifyAPestRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:ClassifyAPestResponse" name="ClassifyAPestResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ClassifyPestsSoapBinding" type="impl:ClassifyPests">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="MLPCPestClassifier">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="MLPCPestClassifierRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="MLPCPestClassifierResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="UpdateTrainingFile">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="UpdateTrainingFileRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="UpdateTrainingFileResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ClassifyAPest">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ClassifyAPestRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ClassifyAPestResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ClassifyPestsService">
+
+      <wsdl:port binding="impl:ClassifyPestsSoapBinding" name="ClassifyPests">
+
+         <wsdlsoap:address location="http://localhost:8080/FawServerApplications/services/ClassifyPests"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
