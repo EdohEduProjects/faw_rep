@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ant.AntBuilderLaunchConfigurationType">
+<booleanAttribute key="de.toem.impulse.launchactivateLaunch" value="false"/>
+<booleanAttribute key="de.toem.impulse.launchactivateTermination" value="false"/>
+<intAttribute key="de.toem.impulse.launchdelayLaunch" value="0"/>
+<intAttribute key="de.toem.impulse.launchlaunch" value="2"/>
+<intAttribute key="de.toem.impulse.launchmode" value="3"/>
+<stringAttribute key="de.toem.impulse.launchport" value=""/>
+<booleanAttribute key="de.toem.impulse.launchrestart" value="true"/>
+<intAttribute key="de.toem.impulse.launchterminate" value="1"/>
+<booleanAttribute key="org.eclipse.ant.ui.ATTR_TARGETS_UPDATED" value="true"/>
+<booleanAttribute key="org.eclipse.ant.ui.DEFAULT_VM_INSTALL" value="false"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
+<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="FawDataMapper"/>
+<booleanAttribute key="org.eclipse.ui.externaltools.ATTR_BUILDER_ENABLED" value="true"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="C:\Users\Thierry Edoh\eclipse-workspace\FawProject\Data\build\build.xml"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_RUN_BUILD_KINDS" value=""/>
+<booleanAttribute key="org.eclipse.ui.externaltools.ATTR_TRIGGERS_CONFIGURED" value="true"/>
+</launchConfiguration>
