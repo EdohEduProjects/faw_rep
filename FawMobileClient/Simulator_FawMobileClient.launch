@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<booleanAttribute key="de.toem.impulse.launchactivateLaunch" value="false"/>
+<booleanAttribute key="de.toem.impulse.launchactivateTermination" value="false"/>
+<intAttribute key="de.toem.impulse.launchdelayLaunch" value="0"/>
+<intAttribute key="de.toem.impulse.launchlaunch" value="2"/>
+<intAttribute key="de.toem.impulse.launchmode" value="3"/>
+<stringAttribute key="de.toem.impulse.launchport" value=""/>
+<booleanAttribute key="de.toem.impulse.launchrestart" value="true"/>
+<intAttribute key="de.toem.impulse.launchterminate" value="1"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/FawMobileClient/JavaSE.jar"/>
+<listEntry value="/FawMobileClient"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-<listEntry value="1"/>
+<listEntry value="4"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
@@ -18,7 +26,6 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.codename1.impl.javase.Simulator"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="com.fallarmywormproj.mobile.clients.ClientViews"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="bj.armyworm.mobile.view.ClientViews"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="FawMobileClient"/>
 </launchConfiguration>
-  
