@@ -4,6 +4,7 @@
 package bj.armyworm.services.learning;
 
 import javax.jws.WebService;
+import bj.armyworm.data.*;
 
 /**
  * @author Thierry Edoh
