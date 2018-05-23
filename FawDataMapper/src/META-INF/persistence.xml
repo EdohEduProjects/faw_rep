@@ -16,10 +16,6 @@
 			<property name="eclipselink.ddl-generation.output-mode" value="both"/>
 			<property name="eclipselink.application-location" value="C:\Users\Thierry Edoh\eclipse-workspace\FawProject\Data"/>
 			<property name="javax.persistence.schema-generation.scripts.action" value="create"/>
-			
-			
-			
-			
 			</properties>
 	</persistence-unit>
 </persistence>
