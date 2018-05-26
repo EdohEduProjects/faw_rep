@@ -58,7 +58,7 @@ public class ClientViews {
             current.show();
             return;
         }
-        Form hi = new Form("Welcome", new BorderLayout(BorderLayout.CENTER_BEHAVIOR_CENTER_ABSOLUTE));
+        Form hi = new Form("Welcome to Faw Monitoring System..", new BorderLayout(BorderLayout.CENTER_BEHAVIOR_CENTER_ABSOLUTE));
         final Label apple = new Label(theme.getImage("apple-icon.png")); 
         final Label android = new Label(theme.getImage("android-icon.png")); 
         final Label windows = new Label(theme.getImage("windows-icon.png")); 
@@ -66,6 +66,8 @@ public class ClientViews {
         Button getStarted = new Button("Let's Get Started!");
         FontImage.setMaterialIcon(getStarted, FontImage.MATERIAL_LINK);
         getStarted.setUIID("GetStarted");
+        
+        
         hi.addComponent(BorderLayout.CENTER, 
                 LayeredLayout.encloseIn(
                         BoxLayout.encloseY(
@@ -78,7 +80,9 @@ public class ClientViews {
         
         
         getStarted.addActionListener((e) -> {
-            Display.getInstance().execute("https://www.codenameone.com/developers.html");
+          Display.getInstance().execute("https://www.codenameone.com/developers.html");
+          
+       
         });
         
         new UITimer(() -> {
@@ -92,7 +96,7 @@ public class ClientViews {
                 }                
             }
         }).schedule(2200, true, hi);
-        hi.show();
+       hi.show();
     }
 
     public void stop() {
@@ -104,6 +108,7 @@ public class ClientViews {
     }
     
     public void destroy() {
+    	
     }
 
 }
