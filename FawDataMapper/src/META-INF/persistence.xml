@@ -2,9 +2,18 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="FawDataMapper" transaction-type="RESOURCE_LOCAL">
 		<mapping-file>META-INF/orm.xml</mapping-file>
-		<class>model.famer</class>
-		<class>model.geolocation</class>
-		<class>model.pest</class>
+		<class>model.Farmer</class>
+		<class>model.FarmerPK</class>
+		<class>model.FieldLocation</class>
+		<class>model.FieldLocationPK</class>
+		<class>model.Pest</class>
+		<class>model.PestPK</class>
+		<class>model.Pesticide</class>
+		<class>model.TechAssistant</class>
+		<class>model.TreatmentProtocol</class>
+		<class>model.TreatmentProtocolPK</class>
+		<class>model.TypeOfPest</class>
+		<class>model.TypeOfPestPK</class>
 			
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/armywormdata"/>
