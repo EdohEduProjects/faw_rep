@@ -19,8 +19,9 @@ public class Pesticide implements Serializable {
 	@Column(unique=true, nullable=false)
 	private int pesticide_ID;
 
+	@Lob
 	@Column(name="mode_of_use", nullable=false)
-	private Object modeOfUse;
+	private String modeOfUse;
 
 	@Column(name="pesticide_adverse", nullable=false, length=45)
 	private String pesticideAdverse;
@@ -50,11 +51,11 @@ public class Pesticide implements Serializable {
 		this.pesticide_ID = pesticide_ID;
 	}
 
-	public Object getModeOfUse() {
+	public String getModeOfUse() {
 		return this.modeOfUse;
 	}
 
-	public void setModeOfUse(Object modeOfUse) {
+	public void setModeOfUse(String modeOfUse) {
 		this.modeOfUse = modeOfUse;
 	}
 

@@ -20,8 +20,9 @@ public class TreatmentProtocol implements Serializable {
 	@EmbeddedId
 	private TreatmentProtocolPK id;
 
+	@Lob
 	@Column(nullable=false)
-	private Object description;
+	private String description;
 
 	@Column(name="treatment_duration", nullable=false)
 	private Timestamp treatmentDuration;
@@ -76,11 +77,11 @@ public class TreatmentProtocol implements Serializable {
 		this.id = id;
 	}
 
-	public Object getDescription() {
+	public String getDescription() {
 		return this.description;
 	}
 
-	public void setDescription(Object description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
